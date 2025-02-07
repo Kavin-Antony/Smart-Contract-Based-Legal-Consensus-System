@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decentralized Legal Consensus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Decentralized Legal Consensus</h1>
+
+    <div class="buttons">
+      <button onclick="showCaseDetails()">Case Details</button>
+      <button onclick="showMessages()">Messages</button>
+    </div>
+
+    <!-- Case Details Page -->
+    <div class="page" id="caseDetailsPage">
+      <h2>Case Details</h2>
+      <div>
+        <label for="caseId">Enter Case ID:</label>
+        <input type="number" id="caseId" placeholder="Enter case ID">
+        <button onclick="getCaseDetails()">Get Case Details</button>
+      </div>
+
+      <div class="details" id="caseDetails"></div>
+    </div>
+
+    <!-- Messages Page -->
+    <div class="page" id="messagesPage" style="display:none;">
+      <h2>Messages</h2>
+      <div>
+        <label for="caseIdMessages">Enter Case ID:</label>
+        <input type="number" id="caseIdMessages" placeholder="Enter case ID">
+        <button onclick="getMessages()">Get Messages</button>
+      </div>
+
+      <div class="messages" id="caseMessages"></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.5.3/dist/web3.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

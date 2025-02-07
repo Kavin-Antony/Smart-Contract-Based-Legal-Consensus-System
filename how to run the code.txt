@@ -1,0 +1,39 @@
+admin = 0xf9b8962C78D058CAa95cb0D19AE58b4EDE438C7E
+
+const LawConsensus = await artifacts.require("LawConsensus");
+
+const lawConsensus = await LawConsensus.deployed();
+
+await lawConsensus.submitCase("To find the criminal of a murder", { from: accounts[0] });
+
+const caseDetails = await lawConsensus.getCase(1);
+
+console.log(caseDetails.description); 
+
+await lawConsensus.addJudge(accounts[1], 1, { from: accounts[0] });
+
+await lawConsensus.addAdvocate(accounts[2], 1, { from: accounts[0] });
+
+await lawConsensus.addAdvocate(accounts[3], 1, { from: accounts[0] });
+
+const updatedCaseDetails2 = await lawConsensus.getCase(1);
+
+console.log(updatedCaseDetails2.judge);    
+
+console.log(updatedCaseDetails1.advocate1); 
+
+console.log(updatedCaseDetails1.advocate2); 
+
+await lawConsensus.sendMessage(1, "The phone records will be examined in detail. I will also consider the discrepancies in the timeline before proceeding.", "", { from: accounts[1] });
+
+await lawConsensus.sendMessage(1, "Your Honor, the prosecution's theory of the crime doesn't match the timeline of events. The defendant had no access to the victim at the time the crime occurred", "", { from: accounts[2] });
+
+await lawConsensus.sendMessage(1, "Your Honor, that argument is speculative. We have phone records showing that the defendant and the victim were in contact just hours before the murder.", "", { from: accounts[3] });
+
+
+await lawConsensus.judgeApprove(1, { from: '0xbbf6ce368b1f10338969a528a4fc2a15de01a628'});
+
+await lawConsensus.judgeReject(1, { from: '0xbbf6ce368b1f10338969a528a4fc2a15de01a628'});
+
+await lawConsensus.closeCase(1, { from: accounts[0] });
+
