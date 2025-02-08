@@ -19,7 +19,7 @@
 ## ⚙️ Installation & Setup
 1. **Clone the Repository**
 ```sh
-   git clone https://github.com/yourusername/Decentralized-Legal-Consensus.git
+   git clone https://github.com/Kavin-Antony/Smart-Contract-Based-Legal-Consensus-System.git
 ```
 ```sh
    cd Decentralized-Legal-Consensus'
