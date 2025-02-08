@@ -20,6 +20,8 @@
 1. **Clone the Repository**
 ```sh
    git clone https://github.com/yourusername/Decentralized-Legal-Consensus.git
+```
+```sh
    cd Decentralized-Legal-Consensus'
 ```
 2.	**Install Dependencies**
@@ -29,16 +31,24 @@
 3. **Install Truffle & Ganache**
 ```sh
     npm install -g truffle
+```
+```sh
     install ganache locally on your system from oficial website and import the truffle-config.js and create a new worksapce with name 'development'
 ```
 4. **Compile & Deploy the Smart Contracts**
 ```sh
     truffle compile
+```
+```sh
     truffle migrate --network development
+```
+```sh
     truffle test //for testing purpose
 ```
 5. **Working**
 ```sh
     truffle console
+```
+```sh
     Use the codes in 'how to run the code.txt' to interact with the smart contract
 ```
