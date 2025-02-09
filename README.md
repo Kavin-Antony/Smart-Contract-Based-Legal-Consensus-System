@@ -1,4 +1,4 @@
-# Smart Contract Based-Legal Consensus using Blockchain
+# Smart Contract Based-Legal Consensus System using Blockchain
 
 ## 📌 Project Overview
 "Decentralized Legal Consensus using Blockchain" is a blockchain-based system that enables transparent, trustless, and secure legal consensus mechanisms. It leverages **smart contracts** and **decentralized governance** to facilitate legal agreements, dispute resolution, and contract enforcement.
