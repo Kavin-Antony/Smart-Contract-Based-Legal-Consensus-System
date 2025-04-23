@@ -31,10 +31,14 @@
     npm install -g truffle
     install ganache locally on your system from oficial website and import the truffle-config.js and create a new worksapce with name 'development'
 ```
-5. **Compile & Deploy the Smart Contracts**
+4. **Compile & Deploy the Smart Contracts**
 ```sh
     truffle compile
     truffle migrate --network development
+    truffle test //for testing purpose
 ```
-
-# Smart-Contract-Based-Legal-Consensus-System
+5. **Working**
+```sh
+    truffle console
+    Use the codes in 'how to run the code.txt' to interact with the smart contract
+```

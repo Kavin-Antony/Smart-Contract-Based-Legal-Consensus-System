@@ -71,7 +71,7 @@ contract LawConsensus {
     cases[caseId].judge = judge;
     judges[judge] = true;  // Add the judge to the judges mapping
     emit JudgeAssigned(caseId, judge);
-}
+    }
 
 
     function addAdvocate(address advocate, uint256 caseId) public onlyAdmin caseExists(caseId) {
