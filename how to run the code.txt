@@ -31,9 +31,9 @@ await lawConsensus.sendMessage(1, "Your Honor, the prosecution's theory of the c
 await lawConsensus.sendMessage(1, "Your Honor, that argument is speculative. We have phone records showing that the defendant and the victim were in contact just hours before the murder.", "", { from: accounts[3] });
 
 
-await lawConsensus.judgeApprove(1, { from: '0xbbf6ce368b1f10338969a528a4fc2a15de01a628'});
+await lawConsensus.judgeApprove(1, { from: accounts[1]});
 
-await lawConsensus.judgeReject(1, { from: '0xbbf6ce368b1f10338969a528a4fc2a15de01a628'});
+await lawConsensus.judgeReject(1, { from: accounts[1]});
 
 await lawConsensus.closeCase(1, { from: accounts[0] });
 
